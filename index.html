@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psi. Danna Sopó | Terapia Psicológica</title>
+  <meta
+    name="description"
+    content="Atención psicológica online y presencial. Un espacio para comprender lo que estás viviendo y empezar a trabajarlo con más claridad."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      --bg: #F6F1EB;
+      --bg-soft: #EFE6DC;
+      --bg-card: #FBF8F4;
+      --text: #2F2A26;
+      --text-soft: #5E554F;
+      --primary: #6E7F6A;
+      --primary-hover: #5E6E5A;
+      --line: #D9CDC1;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(47,42,38,0.08);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1140px;
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img{
+      max-width: 100%;
+      display: block;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container{
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .section{
+      padding: 64px 0;
+    }
+
+    .section-soft{
+      background: var(--bg-soft);
+    }
+
+    .eyebrow{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.93rem;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3{
+      font-family: "Cormorant Garamond", serif;
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    h1{
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    h2{
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    h3{
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    p{
+      font-size: 1rem;
+      color: var(--text-soft);
+    }
+
+    .lead{
+      font-size: 1.03rem;
+      max-width: 760px;
+    }
+
+    .announcement-bar{
+      background: rgba(110,127,106,0.12);
+      border-bottom: 1px solid rgba(110,127,106,0.15);
+      color: var(--primary);
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 12px 14px;
+      font-weight: 600;
+    }
+
+    .hero{
+      padding: 42px 0 26px;
+    }
+
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand img{
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(110,127,106,0.18);
+      background: var(--white);
+    }
+
+    .brand-text{
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .brand-title{
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .brand-subtitle{
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .hero-copy p{
+      margin-bottom: 20px;
+      max-width: 760px;
+    }
+
+    .hero-actions{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: 0.25s ease;
+      cursor: pointer;
+      font-size: 0.96rem;
+    }
+
+    .btn-primary{
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover{
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary{
+      background: transparent;
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover{
+      background: rgba(255,255,255,0.55);
+    }
+
+    .hero-visual{
+      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.55));
+      border: 1px solid rgba(217,205,193,0.9);
+      border-radius: var(--radius-xl);
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-visual img{
+      width: 100%;
+      aspect-ratio: 4 / 4.6;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .hero-visual .visual-note{
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    .objections{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .objection-item{
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: var(--text);
+      font-size: 0.92rem;
+      box-shadow: var(--shadow);
+    }
+
+    .objection-item span{
+      color: #B06A5A;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .section-header{
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .section-header p{
+      margin-top: 8px;
+    }
+
+    /* TESTIMONIOS PEGADOS */
+    .testimonial-images{
+      column-count: 2;
+      column-gap: 16px;
+      margin-top: 18px;
+      max-width: 860px;
+    }
+
+    .testimonial-item{
+      break-inside: avoid;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-item img{
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(47,42,38,0.08);
+      border: 1px solid rgba(217,205,193,0.95);
+      background: var(--white);
+    }
+
+    .model-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .card{
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .card p{
+      font-size: 0.98rem;
+    }
+
+    .card-icon{
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(110,127,106,0.14);
+      color: var(--primary);
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .roadmap{
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .roadmap-step{
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .roadmap-number{
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(110,127,106,0.14);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .includes-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .mini-testimonials{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    blockquote{
+      color: var(--text);
+      font-size: 0.98rem;
+      font-style: normal;
+    }
+
+    .quote-author{
+      margin-top: 12px;
+      color: var(--primary);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .comparison-wrap{
+      margin-top: 20px;
+    }
+
+    .comparison-table{
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background: var(--bg-card);
+    }
+
+    .comparison-table th,
+    .comparison-table td{
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(217,205,193,0.7);
+    }
+
+    .comparison-table th{
+      background: rgba(110,127,106,0.12);
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .comparison-table td{
+      font-size: 0.95rem;
+      color: var(--text-soft);
+    }
+
+    .comparison-table tr:last-child td{
+      border-bottom: none;
+    }
+
+    .comparison-footer{
+      margin-top: 14px;
+      max-width: 760px;
+    }
+
+    .about-grid{
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .about-photo{
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.55));
+      border: 1px solid var(--line);
+      padding: 12px;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .about-photo img{
+      border-radius: 16px;
+      width: 100%;
+      aspect-ratio: 4 / 4.7;
+      object-fit: cover;
+    }
+
+    .pricing-box{
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-top: 20px;
+    }
+
+    .pricing-item{
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(217,205,193,0.8);
+    }
+
+    .pricing-item:last-child{
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pricing-title{
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .pricing-item p{
+      max-width: 760px;
+    }
+
+    .faq{
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .faq-item{
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .faq-question{
+      width: 100%;
+      background: transparent;
+      border: none;
+      text-align: left;
+      padding: 16px 18px;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .faq-question::after{
+      content: "+";
+      font-size: 1.35rem;
+      line-height: 1;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item.active .faq-question::after{
+      transform: rotate(45deg);
+    }
+
+    .faq-answer{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 18px;
+    }
+
+    .faq-answer p{
+      padding: 0 0 16px;
+      font-size: 0.95rem;
+    }
+
+    .final-cta{
+      text-align: center;
+      padding: 54px 0;
+    }
+
+    .final-cta .card{
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+
+    .final-cta p{
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+
+    footer{
+      background: #E8DED3;
+      border-top: 1px solid rgba(217,205,193,0.9);
+      padding: 28px 0;
+    }
+
+    .footer-inner{
+      display: grid;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .footer-links{
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+      color: var(--text-soft);
+    }
+
+    .footer-small{
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .whatsapp-float{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+      z-index: 1000;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover{
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-float svg{
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 1024px){
+      .hero-grid,
+      .model-grid,
+      .about-grid{
+        grid-template-columns: 1fr;
+      }
+
+      .includes-grid{
+        grid-template-columns: 1fr;
+      }
+
+      .objections{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px){
+      .section{
+        padding: 46px 0;
+      }
+
+      .hero{
+        padding: 34px 0 20px;
+      }
+
+      .container{
+        width: min(94%, 1100px);
+      }
+
+      h1{
+        font-size: clamp(2.1rem, 9vw, 3rem);
+      }
+
+      h2{
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+      }
+
+      p,
+      .lead{
+        font-size: 0.97rem;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .model-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .testimonial-images{
+        column-count: 1;
+        column-gap: 0;
+        max-width: 290px;
+        margin: 18px auto 0;
+      }
+
+      .testimonial-item{
+        margin-bottom: 12px;
+      }
+
+      .mini-testimonials{
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .card{
+        padding: 18px;
+      }
+
+      .roadmap-step{
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+
+      .roadmap-number{
+        width: 50px;
+        height: 50px;
+        font-size: 1.05rem;
+      }
+
+      .hero-visual,
+      .about-photo{
+        padding: 10px;
+      }
+
+      .hero-visual img,
+      .about-photo img{
+        border-radius: 14px;
+      }
+
+      .pricing-box{
+        padding: 18px;
+      }
+
+      .pricing-title{
+        font-size: 1rem;
+      }
+
+      .faq-question{
+        padding: 14px 16px;
+        font-size: 0.95rem;
+      }
+
+      .faq-answer{
+        padding: 0 16px;
+      }
+
+      .comparison-table,
+      .comparison-table thead,
+      .comparison-table tbody,
+      .comparison-table th,
+      .comparison-table td,
+      .comparison-table tr{
+        display: block;
+        width: 100%;
+      }
+
+      .comparison-table thead{
+        display: none;
+      }
+
+      .comparison-table tr{
+        border-bottom: 1px solid rgba(217,205,193,0.75);
+        padding: 8px 0;
+      }
+
+      .comparison-table td{
+        border: none;
+        padding: 10px 14px;
+      }
+
+      .comparison-table td::before{
+        display: block;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 5px;
+      }
+
+      .comparison-table tr td:first-child::before{
+        content: "Seguir sosteniéndolo como puedas";
+      }
+
+      .comparison-table tr td:last-child::before{
+        content: "Empezar un proceso terapéutico";
+      }
+
+      .brand-title{
+        font-size: 1.5rem;
+      }
+
+      .btn{
+        width: 100%;
+      }
+
+      .final-cta{
+        padding: 46px 0;
+      }
+
+      .final-cta .card{
+        padding: 24px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    Atención psicológica online y presencial
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="brand">
+            <img src="logo-danna.png" alt="Logo de Psi. Danna Sopó" />
+            <div class="brand-text">
+              <div class="brand-title">Psi. Danna Sopó</div>
+              <div class="brand-subtitle">Psicóloga · Terapia individual y acompañamiento psicológico</div>
+            </div>
+          </div>
+
+          <h1>Terapia psicológica</h1>
+
+          <p class="lead">
+            A veces se llega a terapia por una crisis, una pérdida, una relación o porque simplemente ya no se sienten bien.
+            En el proceso, muchas veces empiezan a comprender que eso que hoy les afecta también se conecta con experiencias,
+            heridas o patrones que vienen de más atrás.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/593000000000?text=Hola%20Danna%2C%20quisiera%20agendar%20mi%20primera%20consulta."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Agenda tu primera consulta
+            </a>
+
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/593000000000?text=Hola%20Danna%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20terapia%20psicol%C3%B3gica."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <div class="objections">
+            <div class="objection-item"><span>✘</span>No tienes que saber por dónde empezar</div>
+            <div class="objection-item"><span>✘</span>No tienes que hablar de todo de una vez</div>
+            <div class="objection-item"><span>✘</span>No tienes que esperar a estar peor</div>
+            <div class="objection-item"><span>✘</span>No se trata de juzgarte</div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="foto.danna.jpg" alt="Foto de Danna Sopó" />
+          <p class="visual-note">
+            Un espacio para comprender mejor lo que estás viviendo y empezar a trabajarlo con más claridad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Testimonios</div>
+        <h2>Experiencias de personas que han hecho terapia conmigo</h2>
+        <p>
+          Más allá de la primera consulta, lo importante es que el proceso haga sentido, aporte claridad
+          y ayude a moverse de otra manera frente a lo que se está viviendo.
+        </p>
+      </div>
+
+      <div class="testimonial-images">
+        <div class="testimonial-item">
+          <img src="imagenes.inicio.jpg" alt="Testimonio sobre el inicio del proceso terapéutico con Danna" />
+        </div>
+
+        <div class="testimonial-item">
+          <img src="imagenes.kelly.jpg" alt="Testimonio de Kelly" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Cómo trabajo</div>
+        <h2>Cómo trabajo en terapia</h2>
+        <p>
+          El proceso empieza con una primera consulta para comprender mejor lo que estás viviendo y qué necesita más atención en este momento.
+          A partir de ahí, el trabajo va explorando también tu historia, vínculos y patrones, para no quedarnos solo con lo que hoy duele,
+          sino entender mejor lo que hay detrás.
+        </p>
+      </div>
+
+      <div class="model-grid">
+        <div class="card">
+          <div class="card-icon">✦</div>
+          <h3>Escucha, profundidad y dirección</h3>
+          <p>
+            Mi forma de acompañar combina escucha clínica, profundidad y una dirección clara del proceso.
+            No se trata solo de hablar de lo que pasa, sino de ir entendiendo con más precisión qué se mueve,
+            cómo se repite y qué necesita ser trabajado.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">✦</div>
+          <h3>Un proceso que se construye contigo</h3>
+          <p>
+            Cada proceso es distinto. El trabajo se va construyendo según lo que aparece, respetando tus tiempos,
+            sin forzar, pero sin quedarnos tampoco en la superficie. Si algo importante ocurre entre sesiones,
+            puedes escribírmelo para tenerlo presente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Proceso</div>
+        <h2>Cómo suele ser el proceso</h2>
+        <p>
+          Cada proceso es distinto, pero este suele ser el recorrido general con el que empezamos a trabajar.
+        </p>
+      </div>
+
+      <div class="roadmap">
+        <div class="roadmap-step">
+          <div class="roadmap-number">1</div>
+          <div>
+            <h3>Primer espacio de consulta</h3>
+            <p>
+              Conversamos sobre lo que estás viviendo, tu motivo de consulta y aquello que hoy necesita más atención.
+            </p>
+          </div>
+        </div>
+
+        <div class="roadmap-step">
+          <div class="roadmap-number">2</div>
+          <div>
+            <h3>Comprender lo que hay detrás</h3>
+            <p>
+              Exploramos tu historia, vínculos, experiencias y patrones para entender mejor lo que te afecta
+              y cómo se ha ido sosteniendo en el tiempo.
+            </p>
+          </div>
+        </div>
+
+        <div class="roadmap-step">
+          <div class="roadmap-number">3</div>
+          <div>
+            <h3>Trabajar el proceso</h3>
+            <p>
+              Acompañamos lo que va apareciendo en terapia con más claridad, profundidad y seguimiento,
+              respetando tu ritmo y lo que necesite ser trabajado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Qué incluye</div>
+        <h2>Qué incluye este espacio terapéutico</h2>
+        <p>
+          No se trata de una sesión aislada, sino de un proceso acompañado, con estructura y seguimiento.
+        </p>
+      </div>
+
+      <div class="includes-grid">
+        <div class="card">
+          <h3>Primera consulta de exploración</h3>
+          <p>
+            Un primer espacio para comprender tu motivo de consulta, el momento que estás viviendo
+            y aquello que hoy necesita más atención.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Lectura clínica de tu proceso</h3>
+          <p>
+            Una mirada más amplia a tu historia, vínculos y patrones para entender mejor lo que te afecta
+            y no quedarnos solo con lo superficial.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Acompañamiento terapéutico continuo</h3>
+          <p>
+            Sesiones orientadas a explorar y trabajar lo que va apareciendo, con más claridad,
+            profundidad y dirección.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Apoyo entre sesiones cuando sea necesario</h3>
+          <p>
+            Si ocurre algo importante o quieres dejar una novedad presente en el proceso,
+            puedes escribírmelo para tenerlo en cuenta.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Más testimonios</div>
+        <h2>Más experiencias del proceso</h2>
+        <p>
+          La confianza, la claridad y el seguimiento suelen ser tres cosas que más se repiten
+          en quienes han pasado por consulta.
+        </p>
+      </div>
+
+      <div class="mini-testimonials">
+        <div class="card">
+          <blockquote>
+            “Para mí ha sido de mucha ayuda, siempre me sentí muy cómoda y en un lugar seguro,
+            me diste mucha claridad de mis dudas y me ayudó mucho a comenzar a sanar.”
+          </blockquote>
+          <div class="quote-author">Paciente</div>
+        </div>
+
+        <div class="card">
+          <blockquote>
+            “Las sesiones han sido muy buenas y alentadoras, brinda la confianza necesaria para abordar
+            temas difíciles y me ha ayudado a entender mejor mi situación.”
+          </blockquote>
+          <div class="quote-author">Paciente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="foto.danna.jpg" alt="Danna Sopó" />
+        </div>
+
+        <div>
+          <div class="eyebrow">Sobre Danna</div>
+          <h2>Un espacio cuidado, humano y con profundidad</h2>
+
+          <p style="margin-bottom: 16px;">
+            Acompaño procesos terapéuticos desde una mirada que busca ir más allá del motivo puntual por el que una persona llega a consulta. Muchas veces, lo que hoy duele también se conecta con experiencias, heridas o patrones que vienen de más atrás.
+          </p>
+
+          <p>
+            Trabajo respetando los tiempos de cada persona, sin forzar, pero sin quedarnos solo en la superficie. Mi intención es ofrecer un espacio donde alguien pueda sentirse acompañado y empezar a comprender con más claridad lo que le está pasando.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Modalidad y valores</div>
+        <h2>Modalidad y valores</h2>
+        <p>
+          La idea es que el proceso sea claro también en lo práctico. Aquí tienes la forma en que trabajo
+          y los valores actuales de consulta.
+        </p>
+      </div>
+
+      <div class="pricing-box">
+        <div class="pricing-item">
+          <div class="pricing-title">Primera consulta: $30</div>
+          <p>
+            Un primer espacio para conocernos y entender con más claridad lo que estás viviendo.
+          </p>
+        </div>
+
+        <div class="pricing-item">
+          <div class="pricing-title">Sesión individual: $50</div>
+          <p>
+            Para continuar el proceso con sesiones individuales según lo que se vaya trabajando.
+          </p>
+        </div>
+
+        <div class="pricing-item">
+          <div class="pricing-title">Proceso inicial de 4 sesiones: $160</div>
+          <p>
+            Recomiendo empezar con una sesión por semana durante el primer mes y luego evaluar cómo continuar según cada caso.
+          </p>
+        </div>
+
+        <div class="pricing-item">
+          <div class="pricing-title">Duración de cada consulta: 1 hora y 30 minutos</div>
+          <p>
+            Cada sesión tiene un tiempo asignado y se trabaja dentro de ese espacio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-header">
+        <div class="eyebrow">Preguntas frecuentes</div>
+        <h2>Preguntas frecuentes</h2>
+        <p>
+          Si ya vienes con la idea de empezar, esta parte te ayuda a resolver lo práctico sin seguir dando vueltas.
+        </p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿La terapia es online o presencial?</button>
+          <div class="faq-answer">
+            <p>La atención puede ser online o presencial, según lo que necesites y la disponibilidad.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Cómo es la primera consulta?</button>
+          <div class="faq-answer">
+            <p>Es un primer espacio para conocernos, comprender con más claridad lo que estás viviendo y empezar a identificar qué necesita más atención en este momento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Cada cuánto son las sesiones?</button>
+          <div class="faq-answer">
+            <p>Generalmente recomiendo empezar con una sesión por semana durante el primer mes. Después de eso, se evalúa cómo continuar según cada caso.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Cuánto dura cada consulta?</button>
+          <div class="faq-answer">
+            <p>Cada consulta tiene una duración de 1 hora y 30 minutos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Cuánto cuesta?</button>
+          <div class="faq-answer">
+            <p>La primera consulta tiene un valor de $30. Si decides continuar, puedes hacerlo con sesiones individuales de $50 o con un proceso inicial de 4 sesiones por $160.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Puedo escribir entre sesiones?</button>
+          <div class="faq-answer">
+            <p>Sí. Si ocurre algo importante o quieres dejarme una novedad para tenerla presente en el proceso, puedes escribirme. Si es algo que requiere más contexto o profundidad, lo mejor será conversarlo en consulta.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Puedo reagendar una consulta?</button>
+          <div class="faq-answer">
+            <p>Sí, puedes reagendar una vez con al menos 12 horas de anticipación.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Qué pasa si llego tarde o no asisto?</button>
+          <div class="faq-answer">
+            <p>Cada consulta tiene un tiempo asignado. Si llegas tarde, la sesión se realiza con el tiempo restante. Si no asistes, o si no reagendas con al menos 12 horas de anticipación, la sesión se pierde. Las consultas no son reembolsables.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <div class="card">
+        <div class="eyebrow">Agenda</div>
+        <h2>Si sientes que es momento de empezar, puedes agendar tu primera consulta</h2>
+        <p>
+          A veces no hace falta tener todo claro para pedir ayuda. Basta con reconocer que algo necesita ser mirado de otra manera.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/593000000000?text=Hola%20Danna%2C%20quisiera%20agendar%20mi%20primera%20consulta."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agenda tu primera consulta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-small">
+        La información contenida en esta página tiene fines informativos y no sustituye una valoración profesional individual ni atención de emergencia.
+      </p>
+
+      <div class="footer-links">
+        <a href="privacy.html">Política de Privacidad</a>
+        <span>·</span>
+        <a href="terms.html">Términos y Condiciones</a>
+      </div>
+
+      <p class="footer-small">
+        Copyright © 2026 Psi. Danna Sopó. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/593000000000?text=Hola%20Danna%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20terapia%20psicol%C3%B3gica."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Escribir por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.19c-.28-.14-1.66-.82-1.92-.91-.26-.1-.45-.14-.64.14-.19.28-.73.91-.9 1.1-.16.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.36-.82-.73-1.38-1.63-1.54-1.91-.16-.28-.02-.43.12-.57.12-.12.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.47-.64-.48h-.55c-.19 0-.49.07-.75.35-.26.28-1 1-1 2.43 0 1.43 1.02 2.81 1.16 3 .14.19 2.01 3.08 4.86 4.31.68.29 1.21.46 1.63.59.68.22 1.29.19 1.78.12.54-.08 1.66-.68 1.89-1.33.23-.66.23-1.22.16-1.33-.07-.12-.26-.19-.54-.33zM16.02 3.2c-7.04 0-12.74 5.7-12.74 12.73 0 2.23.58 4.41 1.67 6.33L3.2 28.8l6.7-1.72a12.7 12.7 0 0 0 6.12 1.56h.01c7.03 0 12.74-5.7 12.74-12.74S23.05 3.2 16.02 3.2zm0 23.14h-.01a10.4 10.4 0 0 1-5.3-1.45l-.38-.22-3.98 1.02 1.06-3.88-.25-.4a10.42 10.42 0 0 1-1.6-5.5c0-5.77 4.69-10.46 10.46-10.46 2.79 0 5.41 1.09 7.38 3.06a10.38 10.38 0 0 1 3.06 7.39c0 5.77-4.7 10.45-10.44 10.45z"/>
+    </svg>
+  </a>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+
+      button.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach((el) => {
+          el.classList.remove("active");
+          el.querySelector(".faq-answer").style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          item.classList.add("active");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
